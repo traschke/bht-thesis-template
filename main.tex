@@ -1,15 +1,16 @@
 \documentclass{bht-thesis}
 
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage{mathpazo} % Use the Palatino font by default
+% \usepackage{mathpazo} % Use the Palatino font by default
 
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
-\addbibresource{example.bib} % The filename of the bibliography
+% \addbibresource{example.bib} % The filename of the bibliography
 
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+% \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 \geometry{
 	paper=a4paper, % Change to letterpaper for US letter
@@ -18,7 +19,7 @@
 	bindingoffset=0cm, % Binding offset
 	top=1.25cm, % Top margin
 	bottom=1.25cm, % Bottom margin
-	showframe, % Uncomment to show how the type block is set on the page
+	% showframe, % Uncomment to show how the type block is set on the page
 }
 
 % Information about the thesis
@@ -27,22 +28,23 @@
 \university{Beuth Hochschule für Technik Berlin}
 \faculty{Fachbereich VI - Informatik und Medien}
 \course{Medieninformatik}
+% \logo{figures/Beuth-Logo_basis}
 
 \thesistitle{Titel der Abschlussarbeit}
 
 \author{Peter Pan}
-%\address{Bla Str. 123, 14852 Berlin}
-%\matnr{123456}
-%\phone{+49123456789}
-%\email{peter@pan.de}
+\address{Bla Str. 123\\14852 Berlin}
+\matnr{123456}
+\phone{+49 1234 56789}
+\email{peter@pan.de}
+\city{Berlin}
 
 \supervisor{Prof. Bla}
-% \expert{Prof. Blubb}
+\expert{Prof. Blubb}
 
 
 \begin{document}
-	% \frontmatter
 	\maketitle
 	\section{Jo}
-	Jetzt geht's los...
+	Jetzt geht's los...\\
 \end{document}
