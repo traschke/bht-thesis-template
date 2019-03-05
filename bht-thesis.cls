@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{bht-thesis}[2019/03/03 Thesis template for Beuth University of Applied Sience Berlin]
 
-\LoadClass{article}
+\LoadClass{scrreprt}
 
 \RequirePackage{xparse}
 \RequirePackage{geometry}

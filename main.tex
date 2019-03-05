@@ -3,8 +3,9 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{blindtext}
 \usepackage{mathpazo} % Use the Palatino font by default
+
+\usepackage{blindtext}
 
 % \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
@@ -12,14 +13,23 @@
 
 % \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
+% Options for KOMA script scrrpt
+\KOMAoptions{
+	fontsize=11pt,
+	paper=a4,
+	DIV=calc,
+	twoside=false,
+	twocolumn=false,
+	draft=false
+}
+
+% Page settings
 \geometry{
-	paper=a4paper, % Change to letterpaper for US letter
-	inner=2.5cm, % Inner margin
-	outer=2.5cm, % Outer margin
-	bindingoffset=0cm, % Binding offset
-	top=1.25cm, % Top margin
-	bottom=1.25cm, % Bottom margin
-	% showframe, % Uncomment to show how the type block is set on the page
+	% showframe,
+	left=2.5cm,
+	right=2.5cm,
+	top=1.25cm,
+	bottom=1.25cm
 }
 
 % Information about the thesis
@@ -28,11 +38,10 @@
 \university{Beuth Hochschule für Technik Berlin}
 \faculty{Fachbereich VI - Informatik und Medien}
 \course{Medieninformatik}
-% \logo{figures/Beuth-Logo_basis}
 
 \thesistitle{Titel der Abschlussarbeit}
-
 \author{Peter Pan}
+
 \address{Bla Str. 123\\14852 Berlin}
 \matnr{123456}
 \phone{+49 1234 56789}
@@ -42,9 +51,11 @@
 \supervisor{Prof. Bla}
 \expert{Prof. Blubb}
 
-
+% Document starts here
 \begin{document}
 	\maketitle
+	\tableofcontents
+	\chapter{Einleitung}
 	\section{Jo}
 	\blindtext[4]
 
