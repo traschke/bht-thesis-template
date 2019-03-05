@@ -70,29 +70,28 @@
 			{\huge\bfseries\@thesistitle}
 			\vfill\vfill
 			\begin{minipage}[t]{0.4\textwidth}
-				\begin{flushleft}
-					\begin{tabular}{l l}
-						\multicolumn{2}{l}{\makecell[l]{\bfseries{Eingereicht von:}}} \\
-						\makecell[l]{Name:} & \makecell[l]{\@author} \\
-						\makecell[l]{Adresse:} & \makecell[l]{\@address} \\
-						\makecell[l]{Matrikel-Nr.:} & \makecell[l]{\@matnr} \\
-						\makecell[l]{Telefon:} & \makecell[l]{\@phone} \\
-						\makecell[l]{E-Mail:} & \makecell[l]{\@email}
-					\end{tabular}
-				\end{flushleft}
+				\vspace{0pt}
+				{\renewcommand{\arraystretch}{1.5}%
+				\begin{tabular}{ll}
+					\multicolumn{2}{l}{\makecell[tl]{\bfseries{Eingereicht von:}}} \\
+					\makecell[tl]{Name:} & \makecell[tl]{\@author} \\
+					\makecell[tl]{Adresse:} & \makecell[tl]{\@address} \\
+					\makecell[tl]{Matrikel-Nr.:} & \makecell[tl]{\@matnr} \\
+					\makecell[tl]{Telefon:} & \makecell[tl]{\@phone} \\
+					\makecell[tl]{E-Mail:} & \makecell[tl]{\@email} \\
+				\end{tabular}}
 			\end{minipage}
+			\hfill
 			\begin{minipage}[t]{0.4\textwidth}
-				\begin{flushleft}
-					\begin{tabular}{l l}
-						\multicolumn{2}{l}{\makecell[l]{\bfseries{Betreut von:}}} \\
-						\makecell[l]{Betreuer:} & \makecell[l]{\@supervisor}\\
-						\makecell[l]{Gutachter:} & \makecell[l]{\@expert}
-					\end{tabular}
-				\end{flushleft}
+				\vspace{0pt}
+				{\renewcommand{\arraystretch}{1.5}%
+				\begin{tabular}{ll}
+					\multicolumn{2}{l}{\makecell[l]{\bfseries{Betreut von:}}} \\
+					\makecell[tl]{Betreuer:} & \makecell[tl]{\@supervisor} \\
+					\makecell[tl]{Gutachter:} & \makecell[tl]{\@expert} \\
+				\end{tabular}}
 			\end{minipage}\\[3cm]
-			\begin{flushleft}
-				\@city, \today
-			\end{flushleft}
 		\end{center}
+		\@city, \today
 	\end{titlepage}
 }
