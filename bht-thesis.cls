@@ -8,6 +8,10 @@
 \RequirePackage{makecell}
 \RequirePackage{array}
 \RequirePackage{graphicx}
+\RequirePackage[automark]{scrpage2}
+
+\pagestyle{headings}
+\ofoot{\pagemark}
 
 \ProcessOptions\relax
 
