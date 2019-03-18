@@ -21,16 +21,16 @@
 	twoside=false,
 	twocolumn=false,
 	draft=false
-}
-
+	}
+	
 % Page settings
 \geometry{
 	% showframe,
 	left=2.5cm,
 	right=2.5cm,
-	top=1.25cm,
-	bottom=1.25cm
-}
+	top=2.5cm,
+	bottom=2.5cm
+	}
 
 % Information about the thesis
 \title{Master Thesis}
@@ -51,15 +51,21 @@
 \supervisor{Prof. Bla}
 \expert{Prof. Blubb}
 
+
 % Document starts here
 \begin{document}
-	\maketitle
-	\tableofcontents
-	\chapter{Einleitung}
-	\section{Jo}
-	\blindtext[4]
+\cleardoublepage
+\pagenumbering{Roman}
+\maketitle
+\tableofcontents
+\listoffigures
+\cleardoublepage
+\pagenumbering{arabic}
+\chapter{Einleitung}
+\section{Jo}
+\blindtext[4]
 
-	\blindtext[2]
+\blindtext[2]
 
-	\blindtext[3]
+\blindtext[3]
 \end{document}
