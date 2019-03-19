@@ -51,9 +51,12 @@
 \supervisor{Prof. Bla}
 \expert{Prof. Blubb}
 
+\date{24. Dezember 2019}
+
 
 % Document starts here
 \begin{document}
+% Titlepage and listings
 \cleardoublepage
 \pagenumbering{Roman}
 \maketitle
@@ -63,10 +66,15 @@
 \lstlistoflistings
 \cleardoublepage
 
+% Real document starts here
+\onehalfspacing
 \pagenumbering{arabic}
+
 \chapter{Einleitung}
 \section{Jo}
 \blindtext[4]
+
+\blindtext[2]
 \begin{table}
 	\centering
 	\begin{tabular}{|l|l|}
@@ -77,18 +85,28 @@
 		\hline
 	\end{tabular}
 	\caption{This is my one big table} \label{tab:sometab}
-  \end{table}
+	\end{table}
+\blindtext[3]
 \section{Jojo}
 \blindtext[2]
+
+\blindtext[3]
+
+\blindtext[5]
+
+\blindtext[1]
+
 \section{Lala}
 \blindtext[3]
-\begin{lstlisting}[float,caption={Nice Java class},label={lst:class}]
+\begin{lstlisting}[language=Java,float,caption={Nice Java class},label={lst:class}]
 	public class MyClass{
-	  public MyClass(){
+		public MyClass(){
 		// creates a new instance
-	  }
+		}
 	}
 \end{lstlisting}
+\blindtext[4]
+\blindtext[2]
 \chapter{Fazit}
 \section{Bla}
 \blindtext[1]
@@ -98,6 +116,10 @@
 	\caption{Beuth Logo}
 	\label{fig:bht-logo}
 \end{figure}
+\blindtext[3]
+\blindtext[5]
 \subsection{Blablubb}
 \blindtext[4]
+\blindtext[2]
+\blindtext[3]
 \end{document}

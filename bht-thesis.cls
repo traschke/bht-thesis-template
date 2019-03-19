@@ -9,8 +9,13 @@
 \RequirePackage{array}
 \RequirePackage{graphicx}
 \RequirePackage[automark]{scrpage2}
+\RequirePackage{setspace}
 
 \RequirePackage{listings}
+\lstset{
+	frame=single,
+	captionpos=b
+}
 \renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
 \renewcommand{\lstlistingname}{Quellcode}
 
@@ -100,6 +105,6 @@
 				\end{tabular}}
 			\end{minipage}\\[3cm]
 		\end{center}
-		\@city, \today
+		\@city, \@date
 	\end{titlepage}
 }
