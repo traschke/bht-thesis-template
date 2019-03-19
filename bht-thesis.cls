@@ -9,6 +9,7 @@
 \RequirePackage{array}
 \RequirePackage{graphicx}
 \RequirePackage[automark]{scrpage2}
+\RequirePackage{listings}
 
 \pagestyle{headings}
 \ofoot{\pagemark}
