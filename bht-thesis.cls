@@ -9,7 +9,10 @@
 \RequirePackage{array}
 \RequirePackage{graphicx}
 \RequirePackage[automark]{scrpage2}
+
 \RequirePackage{listings}
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
+\renewcommand{\lstlistingname}{Quellcode}
 
 \pagestyle{headings}
 \ofoot{\pagemark}

@@ -59,15 +59,36 @@
 \maketitle
 \tableofcontents
 \listoffigures
+\listoftables
+\lstlistoflistings
 \cleardoublepage
+
 \pagenumbering{arabic}
 \chapter{Einleitung}
 \section{Jo}
 \blindtext[4]
+\begin{table}
+	\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		Hallo & Hallo \\
+		\hline
+		Jo & Jo \\
+		\hline
+	\end{tabular}
+	\caption{This is my one big table} \label{tab:sometab}
+  \end{table}
 \section{Jojo}
 \blindtext[2]
 \section{Lala}
 \blindtext[3]
+\begin{lstlisting}[float,caption={Nice Java class},label={lst:class}]
+	public class MyClass{
+	  public MyClass(){
+		// creates a new instance
+	  }
+	}
+\end{lstlisting}
 \chapter{Fazit}
 \section{Bla}
 \blindtext[1]
