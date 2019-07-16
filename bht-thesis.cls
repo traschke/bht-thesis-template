@@ -3,6 +3,16 @@
 
 \LoadClass{scrreprt}
 
+\KOMAoptions{
+	fontsize=12pt,
+	paper=a4,
+	DIV=calc,
+	twoside=false,
+	twocolumn=false,
+	draft=false,
+	parskip=full
+	}
+
 \RequirePackage{xparse}
 \RequirePackage{geometry}
 \RequirePackage{makecell}
@@ -10,6 +20,15 @@
 \RequirePackage{graphicx}
 \RequirePackage[automark]{scrpage2}
 \RequirePackage{setspace}
+
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \RequirePackage{listings}
 \lstset{
@@ -19,8 +38,15 @@
 \renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
 \renewcommand{\lstlistingname}{Quellcode}
 
-\pagestyle{headings}
-\ofoot{\pagemark}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+% \ohead{\rightmark}
+% \ohead{\leftmark}
+\cfoot{
+	\begin{flushright}
+		\pagemark
+	\end{flushright}
+}
 
 \ProcessOptions\relax
 
