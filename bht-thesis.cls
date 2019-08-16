@@ -38,15 +38,16 @@
 \renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
 \renewcommand{\lstlistingname}{Quellcode}
 
-\pagestyle{scrheadings}
-\clearscrheadfoot
+% FIXME Roman page numbers not showing
+% \pagestyle{scrheadings}
+% \clearscrheadfoot
 % \ohead{\rightmark}
 % \ohead{\leftmark}
-\cfoot{
-	\begin{flushright}
-		\pagemark
-	\end{flushright}
-}
+% \cfoot{
+% 	\begin{flushright}
+% 		\pagemark
+% 	\end{flushright}
+% }
 
 \ProcessOptions\relax
 
