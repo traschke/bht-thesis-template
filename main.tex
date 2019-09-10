@@ -4,46 +4,17 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Use the Palatino font by default
-% \usepackage{cite}
-% \bibliographystyle{alphadin}
 
-% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-% \usepackage[backend=biber]{biblatex} %biblatex mit biber laden
-% \ExecuteBibliographyOptions{
-% 	sorting=nyt, %Sortierung Autor, Titel, Jahr
-% 	bibwarn=true, %Probleme mit den Daten, die Backend betreffen anzeigen
-% 	isbn=false, %keine isbn anzeigen
-% 	url=false %keine url anzeigen
-% }
-\usepackage[
-	backend=biber,
-	style=authoryear,
-	citestyle=authoryear,
-	sorting=ynt
-]{biblatex}
-
-% \usepackage{csquotes}
-% \usepackage[backend=biber]{biblatex}
-% \usepackage{natbib}
-\addbibresource{./main.bib} %Bibliographiedateien laden
-
-\newcommand{\citefirst}[1]{%
-  \AtNextCite{\defcounter{maxnames}{1}\defcounter{minnames}{1}}%
-  \citet{#1}%
-}
+\renewcommand\bf{\bfseries}
+\usepackage[longnamesfirst]{natbib}
+\setcitestyle{citesep={;}, aysep={,}}
+\bibliographystyle{agsm}
 
 \usepackage{blindtext}
 
-
-% \addbibresource{example.bib} % The filename of the bibliography
-
-% \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-
-% Options for KOMA script scrrpt
-
 % Standard Page settings
 \geometry{
-	showframe,
+	% showframe,
 	left=2.5cm,
 	right=2.5cm,
 	top=2.5cm,
@@ -145,17 +116,17 @@
 \blindtext[2]
 \blindtext[3]
 \subsection{Blubbobo}
-Wie \cite[S.~6]{ahu61} bereits erläuterte.
+Wie \citet[S.~6]{ahu61} bereits erläuterte.
 
-Und nochmal wurde es so gemacht \parencite[S.~15]{ahu61}.
+Und nochmal wurde es so gemacht \citep[S.~15]{ahu61}.
 
-Es geht ab \textcite[S.~121]{ahu61}.
+Es geht ab \cite[S.~121]{ahu61}.
 
-Wie \cite[S.~6]{ahu61} bereits erläuterte.
+Wie \citet[S.~6]{ahu61} bereits erläuterte.
 
-Und nochmal wurde es so gemacht \parencite[S.~15]{ahu61}.
+Und nochmal wurde es so gemacht \citep[S.~15]{ahu61}.
 
-Es geht ab \textcite[S.~121]{ahu61}.
+Es geht ab \cite[S.~121]{ahu61}.
 
 % Main document end
 \cleardoublepage
@@ -165,8 +136,8 @@ Es geht ab \textcite[S.~121]{ahu61}.
 \setcounter{page}{\thesavepage}
 
 % Bibliography
-% \bibliography{main}
-\printbibliography
+\bibliography{main}
+% \printbibliography
 
 % Appendix
 \cleardoublepage
