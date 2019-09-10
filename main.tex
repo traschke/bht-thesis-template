@@ -4,11 +4,36 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Use the Palatino font by default
-\usepackage{cite}
+% \usepackage{cite}
+% \bibliographystyle{alphadin}
+
+% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+% \usepackage[backend=biber]{biblatex} %biblatex mit biber laden
+% \ExecuteBibliographyOptions{
+% 	sorting=nyt, %Sortierung Autor, Titel, Jahr
+% 	bibwarn=true, %Probleme mit den Daten, die Backend betreffen anzeigen
+% 	isbn=false, %keine isbn anzeigen
+% 	url=false %keine url anzeigen
+% }
+\usepackage[
+	backend=biber,
+	style=authoryear,
+	citestyle=authoryear,
+	sorting=ynt
+]{biblatex}
+
+% \usepackage{csquotes}
+% \usepackage[backend=biber]{biblatex}
+% \usepackage{natbib}
+\addbibresource{./main.bib} %Bibliographiedateien laden
+
+\newcommand{\citefirst}[1]{%
+  \AtNextCite{\defcounter{maxnames}{1}\defcounter{minnames}{1}}%
+  \citet{#1}%
+}
 
 \usepackage{blindtext}
 
-% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 % \addbibresource{example.bib} % The filename of the bibliography
 
@@ -18,7 +43,7 @@
 
 % Standard Page settings
 \geometry{
-	% showframe,
+	showframe,
 	left=2.5cm,
 	right=2.5cm,
 	top=2.5cm,
@@ -47,8 +72,10 @@
 \date{24. Dezember 2019}
 
 \newcounter{savepage}
+
 % Document starts here
 \begin{document}
+
 % Titlepage and listings
 \cleardoublepage
 \pagenumbering{Roman}
@@ -118,15 +145,30 @@
 \blindtext[2]
 \blindtext[3]
 \subsection{Blubbobo}
-Das ist eine sehr schöne Quelle~\cite{Nobody06}.
+Wie \cite[S.~6]{ahu61} bereits erläuterte.
 
+Und nochmal wurde es so gemacht \parencite[S.~15]{ahu61}.
+
+Es geht ab \textcite[S.~121]{ahu61}.
+
+Wie \cite[S.~6]{ahu61} bereits erläuterte.
+
+Und nochmal wurde es so gemacht \parencite[S.~15]{ahu61}.
+
+Es geht ab \textcite[S.~121]{ahu61}.
+
+% Main document end
 \cleardoublepage
+% Switch back to roman numbering
 \pagenumbering{Roman}
 % Read pagenumber from previously saved value savepage
 \setcounter{page}{\thesavepage}
-\bibliography{main}
-\bibliographystyle{plain}
 
+% Bibliography
+% \bibliography{main}
+\printbibliography
+
+% Appendix
 \cleardoublepage
 \appendix
 \chapter{Anhang}
@@ -135,6 +177,7 @@ Ganz wichtiger Anhang.
 \section{Noch ein wichtiger Anhang}
 Super wichtiger Anhang.
 
+% Statuary declaration
 \cleardoublepage
 \pagenumbering{gobble}
 \statutorydeclaration

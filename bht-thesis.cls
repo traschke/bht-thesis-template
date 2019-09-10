@@ -10,7 +10,9 @@
 	twoside=false,
 	twocolumn=false,
 	draft=false,
-	parskip=full
+	parskip=full,
+	bibliography=totoc,
+	listof=totoc
 	}
 
 \RequirePackage{xparse}
